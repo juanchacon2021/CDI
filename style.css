@@ -320,8 +320,10 @@ hr {
 
     .botones {
         display: flex;
-        justify-content: center;
-        width: 100%;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 30px;
+        margin-top: 30px;
     }
 
     .button-container {

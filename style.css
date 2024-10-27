@@ -159,10 +159,13 @@ body {
 
 .texto-bienvenida {
     float: right;
-    font-size: 30px;
-    font-weight: 600;
     font-family: 'Sora';
     color: #535353;
+}
+
+.texto-bienvenida a {
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .espacio {
@@ -356,6 +359,20 @@ hr {
 
     .close-btn {
         display: block; /* Mostrar el botón de cierre en pantallas pequeñas */
+    }
+
+    .texto-bienvenida {
+        float: right;
+        font-family: 'Sora';
+        color: #535353;
+    }
+
+    .texto-bienvenida a {
+        font-size: 17px;
+    }
+
+    .sidebar-icon {
+        padding: 5px 10px;
     }
 
 }

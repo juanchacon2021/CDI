@@ -1,6 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+/* Seccion: IN2123
+Estudiantes:
+- Meneses Eduin, CI:32014004
+- Chacon Juan, CI:30128924
+- Gonzalez Anthoan, CI:31111553
+- Jorge Patiño, CI:24550967
+- Rodriguez Manuel, CI:31143265 */
+
+@font-face {
+    font-family: 'Sora';
+    src: url('Sora.ttf');
+}
 
 img {
     width: 30px;

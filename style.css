@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+img {
+    width: 30px;
+    color: #535353;
+}
+
+.dropdown-texto {
+    font-family: 'Sora';
+    color: #535353;
+    margin: 10px 10px;
+    font-weight: 300;
+}
+
+.dropdown-texto:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(153 27 27);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 340px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+    box-shadow: 0px 0px 10px 5px #00000013;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #535353;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar-toggle {
+    display: none;
+}
+
+.sidebar-icon {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    border: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    display: none; /* Ocultar el botón de apertura por defecto */
+}
+
+.sidebar-icon:hover {
+    color: #535353;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    color: #111;
+    cursor: pointer;
+    display: none; /* Ocultar el botón de cierre por defecto */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: none;
+}
+
+.dropdown-label {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: #535353;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-label:hover {
+    color: #f1f1f1;
+}
+
+.dropdown-content {
+    display: none;
+    padding-left: 20px;
+}
+
+.dropdown-toggle:checked + .dropdown-label + .dropdown-content {
+    display: block;
+}
+
+
+body {
+    margin: 0;  
+    padding: 0; 
+}
+
+.gris {
+    background-color: rgb(245 245 244);
+}
+
+.blanco {
+    background-color: white;
+}
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.superponer {
+    z-index: 99;
+}
+
+.sidebarr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que el z-index del sidebar sea mayor */
+}
+
+.table-responsive {
+    position: relative;
+    z-index: 1; /* Asegúrate de que el z-index del contenedor de la tabla sea menor */
+}
+
+.texto-inicio {
+    font-family: 'Sora';
+}
+
+.texto-bienvenida {
+    float: right;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Sora';
+    color: #535353;
+}
+
+.espacio {
+    padding-left: 256px;
+}
+
+.fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.fondo img {
+    width: 200px;
+    height: 170px;
+}
+
+.pacientes {
+    width: 80%;
+    float: right;
+    padding: 20px;
+}
+
+.boton {
+    font-family: 'Sora';
+    background-color: rgb(220 38 38);
+    border-radius: 0.5rem;
+    border: 0.5rem solid rgb(220 38 38);
+    color: white;
+    width: auto;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.botones a {
+    text-decoration: none;
+    color: white;
+}
+
+.botonazul {
+    font-family: 'Sora';
+    background-color: #0054d1;
+    border-radius: 0.5rem;
+    border: 0.5rem solid #0051ca;
+    color: white;
+    width: auto;
+}
+
+.botonverde {
+    font-family: 'Sora';
+    background-color: rgb(47, 148, 52);
+    border-radius: 0.5rem;
+    border: 0.5rem solid rgb(47, 148, 52);
+    color: white;
+    width: auto;
+}
+
+.boton:hover {
+    background-color: rgb(153, 27, 27);
+    border: 0.5rem solid rgb(153, 27, 27);
+}
+
+.botonverde:hover {
+    background-color: rgb(47, 148, 52);
+    border: 0.5rem solid rgb(47, 148, 52);
+}
+
+.botonazul:hover {
+    background-color: rgb(0, 0, 146);
+    border: 0.5rem solid rgb(0, 0, 146);
+}
+.botonverde1 {
+    font-family: 'Sora';
+    background-color: rgb(0, 161, 0);
+    border-radius: 0.5rem;
+    border: 0.5rem solid rgb(0, 161, 0);
+    color: white;
+    width: auto;
+}
+.botonverde:hover {
+    background-color: rgb(0, 95, 5);
+    border: 0.5rem solid rgba(0, 95, 5);
+}
+
+.gradiente{
+background: -webkit-linear-gradient(90deg, #ff0000,#ff8080);/* Chrome 10-25, Safari 5.1-6 */ 
+background: linear-gradient(90deg, #ff0000,#ff8080);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.table td, .table th {
+    text-align: center; /* Centra el texto horizontalmente */
+    vertical-align: middle; /* Centra el texto verticalmente */
+}
+
+hr {
+    margin: 2rem 10px 2rem;
+    color: #535353;
+}
+
+.bordei {
+    color: rgb(255, 255, 255);
+    background-color: rgb(153 27 27);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sidebartitulos {
+    font-family: 'Sora';
+    color: #535353;
+
+    padding: 0.5rem 0rem 0.5rem 2rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 25px;
+
+    transition: 0.3s;
+}
+
+.sidebartitulos a {
+    font-size: 18px;
+    margin-right: 2rem;
+}
+
+.sidebartitulos:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(153 27 27);
+}
+
+@media (max-width: 928px) {
+    .espacio {
+        padding-left: 0px;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recortar {
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+    }
+
+    label {
+        padding-top: 20px;
+    }
+
+    
+    .sidebar {
+        left: -350px;
+    }
+
+    .sidebar-toggle:checked + .sidebar-icon + .sidebar {
+        left: 0;
+    }
+
+    .sidebar-icon {
+        display: block; /* Mostrar el botón de apertura en pantallas pequeñas */
+    }
+
+    .close-btn {
+        display: block; /* Mostrar el botón de cierre en pantallas pequeñas */
+    }
+
+}

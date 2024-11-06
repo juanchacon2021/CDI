@@ -197,10 +197,10 @@ body {
     border: 0.5rem solid rgb(220 38 38);
     color: white;
     width: auto;
+    cursor: pointer;
 }
 
 .botones {
-    display: flex;
     justify-content: space-between;
     margin-left: 400px;
     margin-right: 30px;
@@ -228,6 +228,7 @@ body {
     border: 0.5rem solid rgb(47, 148, 52);
     color: white;
     width: auto;
+    cursor: pointer;
 }
 
 .boton:hover {
@@ -315,6 +316,8 @@ hr {
     color: rgb(255, 255, 255);
     background-color: rgb(153 27 27);
 }
+
+
 
 @media (max-width: 928px) {
     .espacio {

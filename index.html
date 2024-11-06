@@ -32,7 +32,7 @@ Estudiantes:
 
         <div class="sidebartitulos">
             <img src="img/usuario.svg" alt="">
-            <a href="pacientes.html">Pacientes</a>
+            <a href="" id="linkPacientes">Pacientes</a>
         </div>
 
         <hr>
@@ -45,17 +45,17 @@ Estudiantes:
             </div>
        
             <div class="dropdown-content">
-                <a href="#link2" class="dropdown-texto" style="font-size: 17px;">Personal</a>
-                <a href="#link2" class="dropdown-texto" style="font-size: 17px;">Examenes</a>
+                <a href="#link2" class="dropdown-texto" style="font-size: 17px;" id="linkPersonal">Personal</a>
+                <a href="#link2" class="dropdown-texto" style="font-size: 17px;" id="linkExamenes">Examenes</a>
             </div>
         </div>
         <div class="sidebartitulos">
             <img src="img/exclamacion.svg" alt="">
-            <a href="#link4">Emergencias</a>
+            <a href="#link4" id="linkEmergencias">Emergencias</a>
         </div>
         <div class="sidebartitulos">
             <img src="img/chart.svg" alt="">
-            <a href="#link5">Consultas</a>
+            <a href="#link5" id="linkConsultas">Consultas</a>
         </div>
         <div class="sidebartitulos">
             <img src="img/bracket.svg" alt="">
@@ -64,12 +64,21 @@ Estudiantes:
     </div>
 
     <article class="inicio blanco">
-        <h1 class="texto-bienvenida">Hola, Bienvenido</h1>
+        <h1 class="texto-bienvenida" id="mensaje">Hola, Bienvenido</h1>
     </article>
     
     <div class="fondo">
-        <img src="img/logo.png" alt="">
+        <img src="img/logo.png" alt="" id="linkLogo">
     </div>
+
+    <div class="botones" id="botonesPacientes" style="display: none;">
+        <button class="botonverde" cid="btnRegistrar">Registrar Paciente</button>
+        <button class="boton" id="btnVolver">Volver</button>
+    </div>
+    
+    
+
+    <script src="script.js"></script>
 </body>
 </html>
 

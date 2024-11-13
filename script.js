@@ -171,13 +171,8 @@ $(document).ready(function(){
         }
 
         if (isValid) {
-            // Mostrar el modal de registro exitoso
-            $('#myModal').modal('show');
-
-            // Cerrar el modal después de 5 segundos
-            setTimeout(function() {
-                $('#myModal').modal('hide');
-            }, 5000);
+            // Mostrar mensaje de registro exitoso
+            $("#formulario").after('<div class="success-message" style="color: green;">Registro exitoso</div>');
         }
     });
 });

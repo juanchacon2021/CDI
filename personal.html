@@ -32,7 +32,7 @@ Estudiantes:
 
         <div class="sidebartitulos">
             <img src="img/usuario.svg" alt="">
-            <a href="" id="linkPacientes">Pacientes</a>
+            <a href="index.html" id="linkPacientes">Pacientes</a>
         </div>
 
         <hr>
@@ -65,13 +65,10 @@ Estudiantes:
 
     <article class="inicio blanco">
     </article>
-    
-    <div class="fondo">
-        <img src="img/logo.png" alt="" id="linkLogo">
-    </div>
 
-    <div class="botones" id="botonesPacientes" style="display: none;">
-        <button class="botonverde" id="btnRegistrar">Registrar Paciente</button>
+
+    <div class="botones" id="" style="display: flex;">
+        <button class="botonverde" id="btnRegistrar">Registrar Personal</button>
         <a href="index.html" class="boton" id="btnVolver" style="color: white; text-decoration: none;">Volver</a>
     </div>
     
@@ -97,40 +94,27 @@ Estudiantes:
                         <input type="text" class="form-control" id="apellido" name="apellido" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="edad">Edad:</label>
-                        <input type="text" class="form-control" id="edad" name="edad" required>
+                        <label for="cargo">Cargo:</label>
+                        <select class="form-control" id="cargo" name="cargo" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="doctor">Doctor/a</option>
+                            <option value="enfermera">Enfermera/o</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="estadocivil">Estado Civil:</label>
-                        <select class="form-control" id="estadocivil" name="estadocivil" required>
-                            <option value="">Seleccione una opción</option>
-                            <option value="divorciado">Divorciado</option>
-                            <option value="soltero">Soltero</option>
-                            <option value="casado">Casado</option>
-                            <option value="viudo">Viudo</option>
-                        </select>
-                    </div>
                     <div class="form-group col-md-6">
                         <label for="telefono">Telefono:</label>
                         <input type="tel" class="form-control" id="telefono" name="telefono" required>
                     </div>
-                </div>
-
-                <div class="row">
                     <div class="form-group col-md-6">
                         <label for="direccion">Direccion:</label>
                         <input type="text" class="form-control" id="direccion" name="direccion" required>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="ocupacion">Ocupacion:</label>
-                        <input type="text" class="form-control" id="ocupacion" name="ocupacion" required>
-                    </div>
                 </div>
 
-                <center><button type="submit" class="btn btn-danger">Registrar Paciente</button></center>
+                <center><button type="submit" class="btn btn-danger">Registrar Personal</button></center>
             </form>
         </div>
     </div>

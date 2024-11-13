@@ -43,53 +43,141 @@ $(document).ready(function(){
         $("#myModal").hide();
     });
 
-    // Validar el formulario
-    $("#formulario").submit(function(event){
-        event.preventDefault();
-        var isValid = true;
+    // Crear elementos <span> para mensajes de error
+    $("input").each(function() {
+        $(this).after('<span class="error-message" style="color: red; display: none;"></span>');
+    });
 
-        // Validar nombre
-        if($("#nombre").val().trim() === ""){
-            alert("El nombre es obligatorio");
+    // Validar cédula
+    $("#cedula").on("keypress keyup", function(e) {
+        let errorMessage = $(this).next(".error-message");
+        if (!/^\d*$/.test($(this).val())) {
+            errorMessage.text("La cédula debe contener solo números").show();
+            $(this).val($(this).val().replace(/\D/g, ''));
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar nombre
+    $("#nombre").on("keypress keyup", function(e) {
+        let errorMessage = $(this).next(".error-message");
+        if (!/^[a-zA-Z\s]*$/.test($(this).val())) {
+            errorMessage.text("El nombre debe contener solo letras").show();
+            $(this).val($(this).val().replace(/[^a-zA-Z\s]/g, ''));
+        } else if ($(this).val().trim() === "") {
+            errorMessage.text("El nombre es obligatorio").show();
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar apellido
+    $("#apellido").on("keypress keyup", function(e) {
+        let errorMessage = $(this).next(".error-message");
+        if (!/^[a-zA-Z\s]*$/.test($(this).val())) {
+            errorMessage.text("El apellido debe contener solo letras").show();
+            $(this).val($(this).val().replace(/[^a-zA-Z\s]/g, ''));
+        } else if ($(this).val().trim() === "") {
+            errorMessage.text("El apellido es obligatorio").show();
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar edad
+    $("#edad").on("keypress keyup", function(e) {
+        let errorMessage = $(this).next(".error-message");
+        if (!/^\d*$/.test($(this).val())) {
+            errorMessage.text("La edad debe contener solo números").show();
+            $(this).val($(this).val().replace(/\D/g, ''));
+        } else if ($(this).val().trim() === "") {
+            errorMessage.text("La edad es obligatoria").show();
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar estado civil
+    $("#estadocivil").on("keyup", function() {
+        let errorMessage = $(this).next(".error-message");
+        if ($(this).val().trim() === "") {
+            errorMessage.text("El estado civil es obligatorio").show();
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar teléfono
+    $("#telefono").on("keypress keyup", function(e) {
+        let errorMessage = $(this).next(".error-message");
+        if (!/^\d*$/.test($(this).val())) {
+            errorMessage.text("El teléfono debe contener solo números").show();
+            $(this).val($(this).val().replace(/\D/g, ''));
+        } else if ($(this).val().trim() === "") {
+            errorMessage.text("El teléfono es obligatorio").show();
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar dirección
+    $("#direccion").on("keyup", function() {
+        let errorMessage = $(this).next(".error-message");
+        if ($(this).val().trim() === "") {
+            errorMessage.text("La dirección es obligatoria").show();
+        } else {
+            errorMessage.hide();
+        }
+    });
+
+    // Validar formulario al enviar
+    $("#formulario").submit(function(event) {
+        let isValid = true;
+
+        if ($("#cedula").val().trim() === "" || !/^\d+$/.test($("#cedula").val().trim())) {
+            $("#cedula").next(".error-message").text("La cédula es obligatoria y debe contener solo números").show();
             isValid = false;
         }
 
-        // Validar apellido
-        if($("#apellido").val().trim() === ""){
-            alert("El apellido es obligatorio");
+        if ($("#nombre").val().trim() === "" || !/^[a-zA-Z\s]+$/.test($("#nombre").val().trim())) {
+            $("#nombre").next(".error-message").text("El nombre es obligatorio y debe contener solo letras").show();
             isValid = false;
         }
 
-        // Validar edad
-        if($("#edad").val().trim() === "" || isNaN($("#edad").val().trim())){
-            alert("La edad es obligatoria y debe ser un número");
+        if ($("#apellido").val().trim() === "" || !/^[a-zA-Z\s]+$/.test($("#apellido").val().trim())) {
+            $("#apellido").next(".error-message").text("El apellido es obligatorio y debe contener solo letras").show();
+            isValid = false;
+        }
+
+        if ($("#edad").val().trim() === "" || !/^\d+$/.test($("#edad").val().trim())) {
+            $("#edad").next(".error-message").text("La edad es obligatoria y debe contener solo números").show();
             isValid = false;
         }
 
         if ($("#estadocivil").val().trim() === "") {
-            alert("El estado civil es obligatorio");
+            $("#estadocivil").next(".error-message").text("El estado civil es obligatorio").show();
             isValid = false;
         }
 
-        if ($("#telefono").val().trim() === "") {
-            alert("El teléfono es obligatorio");
+        if ($("#telefono").val().trim() === "" || !/^\d+$/.test($("#telefono").val().trim())) {
+            $("#telefono").next(".error-message").text("El teléfono es obligatorio y debe contener solo números").show();
             isValid = false;
         }
 
         if ($("#direccion").val().trim() === "") {
-            alert("La dirección es obligatoria");
+            $("#direccion").next(".error-message").text("La dirección es obligatoria").show();
             isValid = false;
         }
 
-        if ($("#ocupacion").val().trim() === "") {
-            alert("La ocupación es obligatoria");
-            isValid = false;
-        }
+        if (isValid) {
+            // Mostrar el modal de registro exitoso
+            $('#myModal').modal('show');
 
-        if(isValid){
-            alert("Formulario enviado correctamente");
-            $("#myModal").hide();
+            // Cerrar el modal después de 5 segundos
+            setTimeout(function() {
+                $('#myModal').modal('hide');
+            }, 5000);
         }
     });
-
 });

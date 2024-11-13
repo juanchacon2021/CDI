@@ -170,9 +170,11 @@ $(document).ready(function(){
             isValid = false;
         }
 
-        if (isValid) {
-            // Mostrar mensaje de registro exitoso
-            $("#formulario").after('<div class="success-message" style="color: green;">Registro exitoso</div>');
+        if(isValid){
+            alert("Personal Registrado Correctamente");
+            $("#myModal").hide();
         }
+
+        
     });
 });

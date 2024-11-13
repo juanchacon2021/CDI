@@ -334,8 +334,8 @@ hr {
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
+    width: 60%;
+    max-width: 800px;
     max-height: 80%;
     overflow-y: auto;
 }
@@ -355,7 +355,7 @@ hr {
 
 @media (max-width: 928px) {
     .modal-content {
-        width: 90%;
+        width: 80%;
     }
     
     .espacio {
@@ -365,7 +365,7 @@ hr {
     .botones {
         display: flex;
         justify-content: space-between;
-        margin-left: 100px;
+        margin-left: 20px;
         margin-right: 30px;
         margin-top: 30px;
     }

@@ -1,3 +1,30 @@
+// Movimiento del Sidebar
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    sidebarToggle.addEventListener('change', function() {
+        if (sidebarToggle.checked) {
+            sidebar.classList.add('open');
+        } else {
+            sidebar.classList.remove('open');
+        }
+    });
+});
+
+// Movimiento del Dropdown
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownToggle = document.getElementById('dropdown-toggle');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    dropdownToggle.addEventListener('change', function() {
+        if (dropdownToggle.checked) {
+            dropdownContent.style.display = 'block';
+        } else {
+            dropdownContent.style.display = 'none';
+        }
+    });
+});
 
 // Selecciona el elemento del mensaje por su id
 

@@ -382,7 +382,16 @@ hr {
 
     
     .sidebar {
-        left: -350px;
+        width: 250px;
+            height: 100%;
+            background-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            transition: left 0.3s;
+    }
+    .sidebar.open {
+        left: 0;
     }
 
     .sidebar-toggle:checked + .sidebar-icon + .sidebar {
